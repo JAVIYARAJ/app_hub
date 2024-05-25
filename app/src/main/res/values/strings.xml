@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppHub</string>
+    <string name="development_type">Development Type</string>
+    <string name="app_development">App Development</string>
+    <string name="android_flutter_ios">Android | Flutter | IOS</string>
+    <string name="web_development">Web Development</string>
+    <string name="node_react_angular_vue">Node| React | Angular | Vue</string>
+    <string name="blockchain_development">Blockchain Development</string>
+    <string name="solidity_ethereum_solana">Solidity | Ethereum | Solana</string>
+    <string name="continue_txt">Continue</string>
+    <string name="cancel_txt">Cancel</string>
+</resources>
