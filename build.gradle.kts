@@ -3,3 +3,10 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
 }
+
+buildscript{
+    dependencies{
+        /*This is for navigation extra arguments type safe to avoid invalid type error*/
+        classpath (libs.androidx.navigation.safe.args.gradle.plugin)
+    }
+}
