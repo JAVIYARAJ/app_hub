@@ -3,7 +3,10 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
+
+
 
 android {
     namespace = "com.example.apphub"
@@ -52,4 +55,20 @@ dependencies {
     // Kotlin navigation graph and fragment
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation (libs.circleimageview)
+
+    //retrofit
+    implementation (libs.converter.gson)
+    implementation (libs.retrofit)
+
+    // ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation (libs.logging.interceptor)
+
+    // Koin for Kotlin
+    /*implementation (libs.koin.core)
+    implementation (libs.koin.androidx.viewmodel)*/
+
+
 }

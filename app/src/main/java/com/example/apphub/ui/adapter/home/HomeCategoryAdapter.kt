@@ -1,10 +1,9 @@
-package com.example.apphub.home.adapter
+package com.example.apphub.ui.adapter.home
 import android.content.Context
 import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apphub.core.CustomInterface
 import com.example.apphub.databinding.DevelomentGridItemBinding

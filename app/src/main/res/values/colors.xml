@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="activeButtonColor">#f9b24f</color>
+    <color name="transparent">#ffffff</color>
+    <color name="lightGray">#A8A9AF</color>
+    <color name="cardColor">#222e5e</color>
+    <color name="buttonColor">#4156ca</color>
+    <color name="red">#FF0000</color>
+    <color name="welcome_heading_color">#01dda7</color>
+    <color name="welcome_color">#0053a9</color>
+    <color name="welcome_text_color">#01dda7</color>
 </resources>

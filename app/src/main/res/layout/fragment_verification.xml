@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingHorizontal="20dp"
+tools:context=".ui.fragment.auth.VerificationFragment">
+
+<ImageView
+    android:id="@+id/verificationBackButton"
+    android:layout_width="37dp"
+    android:layout_height="37dp"
+    android:layout_marginTop="10dp"
+    android:contentDescription="@string/forgot_back_button"
+    android:scaleType="centerCrop"
+    android:src="@drawable/left_arrow_icon"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/appIconImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/appicon_content_desciption"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_education_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationBackButton" />
+
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/loginTitleTv"
+    style="@style/RobotTextMedium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="We going to send you the verification code on your phone number"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appIconImg" />
+
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/otpFiledContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/loginTitleTv"
+    android:weightSum="10"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otpFiledFirstTL"
+        style="@style/CustomTextFiled"
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTitleTv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otpFiledFirstTI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            style="@style/RobotTextRegular"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otpFiledSecondTL"
+        style="@style/CustomTextFiled"
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTitleTv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otpFiledSecondTI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            style="@style/RobotTextRegular"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otpFiledThirdTL"
+        style="@style/CustomTextFiled"
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTitleTv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otpFiledThirdTI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            style="@style/RobotTextRegular"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otpFiledFourTL"
+        style="@style/CustomTextFiled"
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTitleTv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otpFiledFourTI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            style="@style/RobotTextRegular"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timerTv"
+        style="@style/RobotTextMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Resend code in 00:60"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpFiledContainer" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/resendTv"
+        style="@style/RobotTextMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Resend code"
+        android:textColor="@color/cardColor"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerTv" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/firstRowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/oneTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/twoTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/threeTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/secondRowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fourTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fiveTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sixTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/thirdRowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sevenTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/eightTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nineTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/fourthRowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/zeroTv"
+                    style="@style/RobotTextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <ImageView
+                android:id="@+id/keyboardBackImg"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="3.33"
+                android:contentDescription="@string/appicon_content_desciption"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_keyboard_back_icon"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/forgotBackButton" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

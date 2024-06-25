@@ -9,4 +9,9 @@ buildscript{
         /*This is for navigation extra arguments type safe to avoid invalid type error*/
         classpath (libs.androidx.navigation.safe.args.gradle.plugin)
     }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
 }

@@ -1,15 +1,18 @@
-package com.example.apphub.ui.home
+package com.example.apphub.ui.fragment.home
 
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.core.view.doOnPreDraw
 import androidx.transition.TransitionInflater
 import com.example.apphub.R
 import com.example.apphub.databinding.FragmentHomeCategoryBinding
+import com.example.apphub.home.model.HomeCategoryDevType
 
 class HomeCategoryFragment : Fragment() {
 
@@ -33,16 +36,16 @@ class HomeCategoryFragment : Fragment() {
 
     private fun init() {
         if(requireArguments().containsKey("data")){
-            Log.d("TAG", "custom: ${requireArguments().getString("data")}")
+            val data = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                arguments?.getParcelable("data", HomeCategoryDevType::class.java)
+            } else {
+                arguments?.getParcelable("data")
+            }
+            data?.categoryIcon?.let {
+                binding.devIcon.setImageResource(it)
+            }
+            binding.devName.text = data?.name?:""
         }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        /*binding.devIcon.apply {
-            transitionName="shared_image"
-            view.doOnPreDraw { startPostponedEnterTransition() }
-        }*/
     }
 
 }

@@ -31,14 +31,14 @@ class AnimationActivity : AppCompatActivity() {
         binding.appDevBtn.setOnClickListener {
             binding.continueBtn.alpha=1f
             binding.appDevBtn.setBackgroundResource(R.drawable.selected_card)
-            var animation= AnimationUtils.loadAnimation(this, R.anim.btn_fade_in_anim)
+            val animation= AnimationUtils.loadAnimation(this, R.anim.btn_fade_in_anim)
             binding.continueBtn.startAnimation(animation)
         }
 
         binding.appDevBtn.setOnClickListener {
             binding.continueBtn.alpha=1f
             binding.appDevBtn.setBackgroundResource(R.drawable.selected_card)
-            var animation= AnimationUtils.loadAnimation(this, R.anim.btn_fade_in_anim)
+            val animation= AnimationUtils.loadAnimation(this, R.anim.btn_fade_in_anim)
             binding.continueBtn.startAnimation(animation)
         }
     }

@@ -16,7 +16,13 @@ class Constant {
             ),
             HomeCategoryDevType(id = 2, name = "Clean Architecture", categoryIcon = R.drawable.ic_android),
             HomeCategoryDevType(id = 3, name = "Networking", categoryIcon = R.drawable.ic_networking),
-            HomeCategoryDevType(id = 4, name = "Code Design", categoryIcon = R.drawable.ic_designing)
+            HomeCategoryDevType(id = 4, name = "Code Design", categoryIcon = R.drawable.ic_designing),
+            HomeCategoryDevType(
+                id = 5,
+                name = "Android components",
+                categoryIcon = R.drawable.ic_components,
+                items = arrayListOf(CategoryItem(id = 51, name = "Activity", categoryIcon = R.drawable.ic_components))
+            )
         )
     }
 

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/welcome_color"
+    tools:context=".ui.fragment.welcome.WelcomeFragment">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcomeTitleFirstTv"
+        style="@style/NunitoTextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:gravity="start"
+        android:text="@string/welcome_first_str"
+        android:textColor="@color/welcome_text_color"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcomeTitleSecondTv"
+        style="@style/NunitoTextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:gravity="start"
+        android:text="@string/welcome_second_str"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTitleFirstTv"
+         />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcomeDescriptionTv"
+        style="@style/PlayfairTextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:gravity="start"
+        android:layout_marginTop="10dp"
+        android:text="Your Adventure in Coding Starts Here"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTitleSecondTv"
+        />
+
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/welcome_circle_shape_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="80dp"
+        />
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/welcome_circle_shape_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/welcomeImgFirstCard"
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedIcon"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeDescriptionTv">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_welcome_image1"
+            android:scaleType="centerCrop"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/welcomeImgSecondCard"
+        android:layout_width="180dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="@+id/welcomeImgFirstCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@+id/welcomeImgFirstCard"
+        app:layout_constraintTop_toTopOf="@+id/welcomeImgFirstCard">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_welcome_image2" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/getStartedIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_welcome_started_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/getStartedTv"
+        style="@style/NunitoTextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Get \nStarted"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/getStartedIcon"
+        app:layout_constraintStart_toEndOf="@+id/getStartedIcon"
+        app:layout_constraintTop_toTopOf="@+id/getStartedIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

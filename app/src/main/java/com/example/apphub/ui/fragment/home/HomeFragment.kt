@@ -1,19 +1,18 @@
-package com.example.apphub.ui.home
+package com.example.apphub.ui.fragment.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.apphub.R
 import com.example.apphub.core.CustomInterface
 import com.example.apphub.databinding.FragmentHomeBinding
-import com.example.apphub.home.adapter.HomeCategoryAdapter
-import com.example.apphub.home.adapter.StaggeredGridItemDecoration
+import com.example.apphub.ui.adapter.home.HomeCategoryAdapter
+import com.example.apphub.ui.adapter.home.StaggeredGridItemDecoration
 import com.example.apphub.home.model.HomeCategoryDevType
 import com.example.apphub.util.Constant
 
@@ -40,18 +39,10 @@ class HomeFragment : Fragment() {
             override fun onItemClick(position: Int, view: View, data: Any?) {
                 var type=data as HomeCategoryDevType?
                 type?.let {
-                    when(it.name){
-                        "Animation"->{
-                            //Here i use fragment navigator extra to perform shared element functionality
-                            val extra= FragmentNavigatorExtras(view to "shared_image")
-                            val bundle=Bundle()
-                            bundle.putParcelable("data",type)
-                            findNavController().navigate(R.id.action_homeFragment_to_homeCategoryFragment,args = bundle, navigatorExtras = extra, navOptions = null)
-                        }
-                        else -> {
-
-                        }
-                    }
+                    val extra= FragmentNavigatorExtras(view to "shared_image")
+                    val bundle=Bundle()
+                    bundle.putParcelable("data",type)
+                    findNavController().navigate(R.id.action_homeFragment_to_homeCategoryFragment,args = bundle, navigatorExtras = extra, navOptions = null)
                 }
             }
         })
